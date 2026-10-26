@@ -17,3 +17,38 @@ Recuerda: este archivo se enlaza DESPUÉS de Bootstrap.
 La paleta es tuya: colores cálidos de plaza de mercado.
 ============================================================
 */
+
+:root {
+  /* Color principal llamativo (Naranja CÁLIDO) */
+  --bs-primary: #ff512f;
+  --bs-primary-rgb: 255, 81, 47;
+  
+  /* Tipografía global de Google Fonts */
+  --bs-body-font-family: 'Poppins', sans-serif;
+}
+
+/* Fondo de la página con degradado suave en la misma paleta cálida */
+body {
+  background: linear-gradient(135deg, #fff8f5 0%, #ffe8e0 100%);
+  min-height: 100vh;
+  background-attachment: fixed;
+}
+
+/* Botón principal con degradado vibrante (Naranja a Rosa/Frambuesa) */
+.btn-primary {
+  --bs-btn-bg: linear-gradient(135deg, #ff512f 0%, #dd2476 100%);
+  --bs-btn-border-color: transparent;
+  --bs-btn-hover-bg: linear-gradient(135deg, #dd2476 0%, #ff512f 100%);
+  --bs-btn-hover-border-color: transparent;
+  
+  background-image: var(--bs-btn-bg) !important;
+  border: none !important;
+  box-shadow: 0 4px 15px rgba(255, 81, 47, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-image: var(--bs-btn-hover-bg) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(221, 36, 118, 0.45);
+}
